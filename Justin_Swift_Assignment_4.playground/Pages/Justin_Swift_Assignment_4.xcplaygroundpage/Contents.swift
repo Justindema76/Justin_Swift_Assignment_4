@@ -28,58 +28,58 @@ class Camper: Trailer, EntertainmentSystem {
         self.engineIsOn = false
         self.camperIsDriving = false
         self.hasTV = true
-        self.brand = "Toyota"
+        self.brand = "Scooby Van"
     }
     //2 methods for managing or interacting with the system.
     func turnOnTV() {
         if self.hasTV {
-          print("Turn on the TV, please!.🖥️")
+          print("Turn on the TV, please!.📺")
             self.hasTV = !self.hasTV
         }else{
-            print("Dude the TV is already on!!!👀")
+            print("Dude the TV is already on!!!📺👀")
         }
     }
     func turnOffTV() {
         if !self.hasTV {
-          print("Turn off the TV, please!")
+          print("Turn off the TV, please!💡📺")
             self.hasTV = !self.hasTV
         }else{
-            print("Dude the TV is off!!!")
+            print("Dude the TV is off!!!📺")
         }
     }
     
 //    2 methods for managing or interacting with the system.
     func startEngine() {
         if !self.engineIsOn {
-            print("Engine is turned on, let's go for a cruise....🚘")
+            print("Engine on the \(brand) is turned on, let's go for a cruise....🚘")
             self.engineIsOn = !self.engineIsOn
         }else{
-            print("Dude....Engine is already on!!!!! Drive....🚗")
+            print("Dude....Engine of the \(brand) is already on!!!!! Drive....🚗")
+        
         }
     }
     func stopEngine() {
         if self.engineIsOn{
-            print("Engine is turned off.")
+            print("Engine is turned off on the \(brand).🚦")
             self.engineIsOn = !self.engineIsOn
         }else{
-            print("Dude... The engine is already off!!!")
+            print("Dude... The engine on the \(brand) is already off!!!🚧")
         }
     }
 }
 
 // testing the funtionality
 var myCamper = Camper()
-var myTV = Camper()
+
 myCamper.startEngine()
 myCamper.startEngine()
 myCamper.stopEngine()
 myCamper.startEngine()
 myCamper.stopEngine()
 myCamper.stopEngine()
-myTV.turnOnTV()
-myTV.turnOnTV()
-myTV.turnOffTV()
-myTV.turnOffTV()
-myTV.turnOffTV()
-myCamper.startEngine()
-myCamper.startEngine()
+myCamper.turnOnTV()
+myCamper.turnOnTV()
+myCamper.turnOffTV()
+myCamper.turnOffTV()
+myCamper.turnOnTV()
+
